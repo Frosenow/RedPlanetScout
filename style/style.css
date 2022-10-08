@@ -61,6 +61,7 @@ form p{
      display: flex;
      font-family: 'VT323', 'Helvetica', sans-serif;
      margin-left: 3rem;
+     border-bottom: 1px solid black;
 }
 
 .about-section{
