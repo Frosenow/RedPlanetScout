@@ -9,16 +9,23 @@
 </head>
 <body>
     <form onsubmit="event.preventDefault()">
-        <p>See photos from the selected day provided by Mars Rover - Curiosity!</p>
+        <p>See photos from the selected day provided by Mars Rovers!</p>
         <label for="date"></label>
         <input type="date" id="date">
+        <small class="error"></small>
+
+        <label for="rover"></label>
+        <select name="rover" id="rover">
+            <option value="curiosity">Curiosity</option>
+            <option value="opportunity">Opportunity</option>
+            <option value="spirit">Spirit</option>
         <small class="error"></small>
 
         <label for="submit"></label>
         <input type="submit" id="submit" value="Get Photos" class="button">
     </form>
 
-    <section class="photoc-container">
+    <section class="photo-container">
 
     </section>
 
