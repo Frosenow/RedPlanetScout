@@ -23,6 +23,9 @@ import React, { Component } from 'react'
 
     handleSubmit(e){
         e.preventDefault();
+        fetch(`http://localhost:${process.env.PORT || 5000}/api/photos?rover=${this.state.rover}&date=${this.state.date}`, {
+            method: 'GET'
+        })
     }
 
     render() {
