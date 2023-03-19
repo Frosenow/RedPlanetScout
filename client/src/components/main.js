@@ -14,18 +14,17 @@ import React, { Component } from 'react'
 
     handleDateChange(event) {
         this.setState({date: event.target.value})
-        console.log(this.state.date)
     }
 
     handleSelectChange(event) {
         this.setState({rover: event.target.value})
     }
 
-    handleSubmit(e){
+    async handleSubmit(e){
         e.preventDefault();
-        fetch(`http://localhost:${process.env.PORT || 5000}/api/photos?rover=${this.state.rover}&date=${this.state.date}`, {
-            method: 'GET'
-        })
+        const response = await fetch(`http://localhost:${process.env.PORT || 5000}/api?rover=${this.state.rover}&date=${this.state.date}`)
+        const data = await response.json()
+        console.log(data)   
     }
 
     render() {
