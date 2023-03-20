@@ -1,0 +1,33 @@
+{
+  "name": "photosfrommars",
+  "version": "1.0.0",
+  "description": "---\r # RedPlanetScout - Mars Photos Gallery\r ## Deployed site: ---\r ---\r RedPlanetScout is a website that uses NASA Open API - Mars Rover Photos. The site provides photos of the selected day. The user himself chooses the day and one of the three NASA's Mars rovers (Curiosity, Opportunity, and Spirit) from which he wants to receive photos\r This API is designed to collect image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars and make it more easily available to other developers, educators, and citizen scientists. This API is maintained by Chris Cerami.\r ---\r In addition to the photos, the user gets information about the photos: \r - Rover Name \r - Earth Date \r - Camera Name  \r - Sol (Sol is a solar day on Mars)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frosenow/RedPlanetScout---Mars-Photos-Gallery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frosenow/RedPlanetScout---Mars-Photos-Gallery/issues"
+  },
+  "homepage": "https://github.com/Frosenow/RedPlanetScout---Mars-Photos-Gallery#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "react-infinite-scroll-component": "^6.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
