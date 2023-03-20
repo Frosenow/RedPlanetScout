@@ -10,7 +10,6 @@ router.get('/', (req, res) => {
     .catch(error => {
         res.status(500).json({error})
     })
-    console.log(`https://api.nasa.gov/mars-photos/api/v1/rovers/${req.query.rover}/photos?earth_date=${req.query.date}&api_key=${process.env.APIKEY}`)
 })
 
 module.exports = router

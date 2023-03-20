@@ -1,5 +1,6 @@
 import './App.css';
 import Form from './components/main'
+import Card from './components/card'
 
 function App() {
   return (
