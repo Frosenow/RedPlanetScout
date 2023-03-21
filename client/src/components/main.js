@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component} from 'react'
 import InfiniteScroll from 'react-infinite-scroll-component'
 import Card from './card'
 
