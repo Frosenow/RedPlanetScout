@@ -10,7 +10,9 @@ import Card from './card'
             date: new Date().toISOString().substring(0,10),
             rover: 'Curiosity',
             data: [],
-            visible: 'hidden'    
+            visible: 'hidden',
+            per_page: 5,
+            page: 1,     
         }
 
         this.handleDateChange = this.handleDateChange.bind(this);
@@ -27,7 +29,8 @@ import Card from './card'
     }
 
     async fetchImages(){
-        const response = await fetch(`http://localhost:${process.env.PORT || 5000}/api?rover=${this.state.rover}&date=${this.state.date}`)
+        this.setState({ page: this.state.page + 1 });
+        const response = await fetch(`http://localhost:${process.env.PORT || 5000}/api?rover=${this.state.rover}&date=${this.state.date}&page=${this.state.page}&per_page=${this.state.per_page}`)
         const dataApi = await response.json()
         this.setState({
             data: this.state.data.concat(dataApi.photos),
@@ -62,14 +65,21 @@ import Card from './card'
             <label htmlFor="submit"></label>
             <input type="submit" id="submit" value="Get Photos" className="button" ></input>
         </form>
-        {this.state.data.length > 0 ? 
-            <div className='images'>
+        {this.state.data.length > 0 ?
+
+            <>
+            <InfiniteScroll className="images"
+                dataLength={this.state.data.length}
+                next={() => this.fetchImages()}
+                hasMore={true}
+                loader={<h1>Loading...</h1>}
+                >
             {this.state.data.map(data => {
               return <Card photo={data} />
-            })}  
-          </div> : null 
+            })}
+            </InfiniteScroll>  
+          </> : null 
         }
-        
         </>
     )
     }
