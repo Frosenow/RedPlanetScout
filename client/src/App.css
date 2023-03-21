@@ -159,6 +159,46 @@ li:not(:first-child) {
 }
 
 /******************************************
+/* LOADING BAR 
+/*******************************************/
+
+.load-text {
+     font-family: 'VT323', 'Helvetica', sans-serif;
+     font-size: 1.5rem;
+     text-align: center;
+     display: block;
+     margin: 0 auto;
+     animation: loading_animation_text 2s ease infinite;
+     grid-column: 1 / -1;
+}
+
+
+@keyframes loading_animation_text {
+     0% {
+       width: 50%;
+       background-color: #f0e7e7;
+     }
+
+     25% {
+       background-color: #451804;
+     }
+   
+     50% {
+       width: 70%;
+       background-color: #c1440e;
+     }
+     
+     75% {
+       background-color: #e77d11;
+     }
+
+     100% {
+       width: 50%;
+       background-color: #fda600;
+     }
+   }
+
+/******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
 

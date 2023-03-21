@@ -11,7 +11,7 @@ import Card from './card'
             rover: 'Curiosity',
             data: [],
             visible: 'hidden',
-            per_page: 5,
+            per_page: 6,
             page: 1,     
         }
 
@@ -35,7 +35,7 @@ import Card from './card'
         this.setState({
             data: this.state.data.concat(dataApi.photos),
             visible: dataApi.photos.length === 0 ? 'visible' : 'hidden'
-        }, () => console.log(this.state.data))
+        })
     }
 
     async handleSubmit(e){
@@ -72,8 +72,8 @@ import Card from './card'
                 dataLength={this.state.data.length}
                 next={() => this.fetchImages()}
                 hasMore={true}
-                loader={<h1>Loading...</h1>}
-                >
+                loader={<span className="load-text">Hold on tight, we're retrieving images from Mars!</span>}
+            >
             {this.state.data.map(data => {
               return <Card photo={data} />
             })}
