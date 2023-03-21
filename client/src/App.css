@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
 
 /* Box Model Hack */
 * {
@@ -17,6 +19,10 @@
 
 .clear {
 	clear: both;
+}
+
+ul {
+     list-style: none;
 }
 
 /******************************************
@@ -38,7 +44,8 @@ form{
      align-items: center;
      flex-direction: column;
      padding: 3rem 0;
-
+     margin: 0 auto;
+     justify-content: center;
 }
 
 form input, 
@@ -60,7 +67,6 @@ form p{
 .container{
      display: flex;
      font-family: 'VT323', 'Helvetica', sans-serif;
-     margin-left: 3rem;
      border-bottom: 1px solid black;
 }
 
@@ -82,8 +88,17 @@ form p{
 /* CARD DESIGN
 /*******************************************/
 
+
+.images{
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(35rem, 3fr));
+     column-gap: .5rem;
+     row-gap: 3rem;
+     justify-items: center;
+     justify-content: center;
+}
+
 .card{
-    margin: 2rem;
     width: 20rem; 
     height: 30rem;
     border-radius: 30px;
@@ -119,10 +134,29 @@ form p{
      transform: translateY(100%);
 }
 
-.card:hover  .card-image{
+.card:hover  .card-image, .card{
      width: 35rem;
 }
 
+.card:not(:hover) {
+     transition-delay: 0.7s;
+     width: 20rem;
+     height: 30rem;  
+}
+
+.card-title {
+     font-size: 1.5rem;
+     font-weight: 700;
+     font-family: 'DM Serif Display';
+}
+
+li:not(:first-child) {
+     font-family: 'VT323', 'Helvetica', sans-serif;
+     font-size: 1.3rem;
+     padding-top: 1rem; 
+     text-align: left;
+     
+}
 
 /******************************************
 /* ADDITIONAL STYLES
