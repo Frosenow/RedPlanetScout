@@ -7,9 +7,9 @@ export default function Card({photo}){
                 <div className="card-description">
                     <ul>
                         <li className="card-title">Rover Name: {`${photo.rover.name}`}</li>
-                        <li>Earth Date: {`${photo.earth_date}`}</li>
-                        <li>Camera Name: {`${photo.camera.name} - ${photo.camera.full_name}`}</li>
-                        <li>Sol: {`${photo.sol}`}</li>
+                        <li>&#127758;Earth Date: {`${photo.earth_date}`}</li>
+                        <li>&#127909;Camera Name: {`${photo.camera.name} - ${photo.camera.full_name}`}</li>
+                        <li>&#128197;Sol: {`${photo.sol}`}</li>
                     </ul>
                 </div>
             </div>
