@@ -14,6 +14,7 @@ app.use(cors())
 // Set static 
 app.use(express.static('./client/public'))
 app.use(express.static('./client/src'))
+app.use(express.static('./client/src/components'))
 
 // Routes 
 app.use('/api', require('./routes'))
