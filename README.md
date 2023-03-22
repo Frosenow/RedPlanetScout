@@ -8,7 +8,7 @@ In addition to the photos, the user gets information about the photos:
 - Camera Name  
 - Sol (Sol is a solar day on Mars)
 
-**Link to project:** [Red Planet Scout] ([(https://red-planet-scout.herokuapp.com/])
+**Link to project:** [Red Planet Scout](https://red-planet-scout.herokuapp.com/)
 
 ![Mockup of the site](./assets/images/mockup.jpg)
 
