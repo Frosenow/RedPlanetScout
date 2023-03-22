@@ -12,9 +12,7 @@ const app = express();
 app.use(cors())
 
 // Set static 
-app.use(express.static('./client/public'))
-app.use(express.static('./client/src'))
-app.use(express.static('./client/src/components'))
+app.use(express.static('./client'))
 
 // Routes 
 app.use('/api', require('./routes'))
