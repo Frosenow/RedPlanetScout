@@ -30,7 +30,7 @@ import Card from './card'
 
     async fetchImages(){
         this.setState({ page: this.state.page + 1 });
-        const response = await fetch(`http://localhost:${process.env.PORT || 5000}/api?rover=${this.state.rover}&date=${this.state.date}&page=${this.state.page}&per_page=${this.state.per_page}`)
+        const response = await fetch(`https://red-planet-scout.herokuapp.com/api?rover=${this.state.rover}&date=${this.state.date}&page=${this.state.page}&per_page=${this.state.per_page}`)
         const dataApi = await response.json()
         this.setState({
             data: this.state.data.concat(dataApi.photos),
