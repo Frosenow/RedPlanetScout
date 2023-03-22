@@ -10,7 +10,7 @@ In addition to the photos, the user gets information about the photos:
 
 **Link to project:** [Red Planet Scout](https://red-planet-scout.herokuapp.com/)
 
-![Mockup of the site](./assets/images/mockup.jpg)
+![Mockup of the site](mockup.jpg)
 
 # Getting Started 
 ### Prerequisites
