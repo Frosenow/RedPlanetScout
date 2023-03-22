@@ -13,6 +13,7 @@ app.use(cors())
 
 // Set static 
 app.use(express.static('./client/build'))
+app.use(express.static('.client/build/static'))
 
 // Routes 
 app.use('/api', require('./routes'))
